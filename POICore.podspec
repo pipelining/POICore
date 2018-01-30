@@ -11,7 +11,7 @@ s.requires_arc = true # 是否启用ARC
 s.platform     = :ios, "9.0" #平台及支持的最低版本
 s.frameworks   = "UIKit", "Foundation" #支持的框架
 # s.dependency = "AFNetworking" # 依赖库
-
+s.resources = ["Images/*.png"]
 # User
 s.author             = { "pipelining" => "zdd@microfeel.net" } # 作者信息
 #s.social_media_url   = "" # 个人主页
