@@ -7,7 +7,13 @@
 //
 
 #import "ZHNTopHud.h"
-#import "MyDefine.h"
+#define  Height [UIScreen mainScreen].bounds.size.height
+#define ZHN_HUD_IS_IPHONEX (Height == 812)
+#define KStatusBarFitHeight (ZHN_HUD_IS_IPHONEX ? 20 : 0)
+#define KHudContentHeight 36
+#define KHudHeight (KHudContentHeight + KStatusBarFitHeight)
+#define KHudPadding 8
+#define KCornerRadius 8
 static BOOL _showing;
 @interface ZHNTopHud()
 @property (nonatomic,strong) UIWindow *hudWindow;
