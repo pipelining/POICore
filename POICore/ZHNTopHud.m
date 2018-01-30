@@ -7,6 +7,7 @@
 //
 
 #import "ZHNTopHud.h"
+#define  Width [UIScreen mainScreen].bounds.size.width
 #define  Height [UIScreen mainScreen].bounds.size.height
 #define ZHN_HUD_IS_IPHONEX (Height == 812)
 #define KStatusBarFitHeight (ZHN_HUD_IS_IPHONEX ? 20 : 0)
