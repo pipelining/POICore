@@ -7,6 +7,8 @@
 //
 
 #import "ZHNAlert.h"
+#define  Width [UIScreen mainScreen].bounds.size.width
+#define  Height [UIScreen mainScreen].bounds.size.height
 static CGFloat KAlertAnimateDuration = 0.7;
 static CGFloat KAlertAnimateDamping = 0.7;
 static CGFloat KAlertAnimateSpring = 1;
@@ -27,8 +29,11 @@ static CGFloat KAlertAnimateSpring = 1;
     // Alert
     ZHNALertMenuView *alert = [ZHNALertMenuView zhn_menuWithMessage:message cancleTitle:cancleTitle confirmTitle:confirmTitle cancleAction:cancleAction confirmAction:confirmAction blurView:blurView];
     [keyWindow addSubview:alert];
-    alert.alertColor = [ZHNThemeManager zhn_getThemeColor];
-    alert.center = CGPointMake(K_SCREEN_WIDTH/2, K_SCREEN_HEIGHT/2);
+    alert.alertColor = [UIColor colorWithRed:(float)(231/255.f)
+                                       green:(float)(76/255.f)
+                                        blue:(float)(60/255.f)
+                                       alpha:1.f];//[ZHNThemeManager zhn_getThemeColor];
+    alert.center = CGPointMake(Width/2, Height/2);
     CGSize size = [alert alertFitSize];
     alert.bounds = CGRectMake(0, 0, size.width, size.height);
     alert.transform =  CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, -[UIScreen mainScreen].bounds.size.height), CGAffineTransformMakeScale(1.5, 1.5));
